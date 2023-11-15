@@ -1,18 +1,43 @@
-const form = document.getElementById("form");
-const countdownDisplay = document.getElementById("countdown-display");
+(function () {
+    const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
 
-form.onsubmit = function(event) {
-    event.preventDefault();
+    let birthday = "Nov 16, 2023 5:00:00",
+    countdown = new Date(birthday).getTime(),
 
-    let countdown = document.getElementById("countdown").value;
+    x = setInterval(function () {
+        let currentDate = new Date().getTime(),
+        distance = countdown - currentDate;
 
-    const countDownTimer = setInterval(() => {
-        countdownDisplay.innerHTML = countdown;
-        countdown--;
+        document.getElementById("days").innerText = Math.floor(distance/(day)),
 
-        if(countdown < 0) {
-            clearInterval(countDownTimer);
-            countdownDisplay.innerHTML = "Done!";
+        document.getElementById("hour").innerText = Math.floor((distance % (day)) / (hour)),
+
+        document.getElementById("minute").innerText = Math.floor((distance % (hour)) / (minute)),
+
+        document.getElementById("second").innerText = Math.floor((distance % (minute)) / (second))
+
+        // when the date is reached,
+        if(distance < 0) {
+            let headline = document.getElementById("headline");
+
+            countdown = document.getElementById("countdown");
+
+            content = document.getElementById("content");
+
+            headline.innerText = "It's your Birthday";
+            countdown.style.display = "none";
+            content.style.display = "block";
+
+            clearInterval(x);
         }
-    }, 1000);
+        //seconds
+    }, 0)
+}());
+
+const event = document.getElementById("suprise");
+function giftCard() {
+    alert("ok");
 }
