@@ -4,7 +4,7 @@
     hour = minute * 60,
     day = hour * 24;
 
-    let birthday = "Nov 16, 2023 16:30:00",
+    let birthday = "Nov 16, 2023 5:00:00",
     countdown = new Date(birthday).getTime(),
 
     x = setInterval(function () {
@@ -27,7 +27,7 @@
 
             content = document.getElementById("content");
 
-            headline.innerText = "Happy Myat Noe Ko Day";
+            headline.innerText = "It's your Birthday";
             countdown.style.display = "none";
             content.style.display = "block";
 
@@ -36,3 +36,8 @@
         //seconds
     }, 0)
 }());
+
+const event = document.getElementById("suprise");
+function giftCard() {
+    alert("ok");
+}

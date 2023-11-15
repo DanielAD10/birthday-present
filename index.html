@@ -8,22 +8,45 @@
 </head>
 <body>
     <div class="container">
-        <form id="form">
-            <label for="countdown">Enter Your Birthday (in seconds)</label>
+        <!-- <form id="form">
+            <label for="countdown">Enter Your Birthday: </label>
             <input type="date" id="countdown">
             <input type="submit" value="Start">
-        </form>
-        <h1 id="headline">Countdown to birthday</h1>
-        <div id="countdown">
-            <ul>
-                <li><span id="days"></span> Days</li>
-                <li><span id="hour"></span> Hours</li>
-                <li><span id="minute"></span> Minutes</li>
-                <li><span id="second"></span> Seconds</li>
-            </ul>
+        </form> -->
+        <div class="countdown">
+            <h1 id="headline">Countdown to birthday</h1>
+            <div id="countdown">
+                <ul>
+                    <li><span id="days"></span> Days</li>
+                    <li><span id="hour"></span> Hours</li>
+                    <li><span id="minute"></span> Minutes</li>
+                    <li><span id="second"></span> Seconds</li>
+                </ul>
+            </div>
         </div>
         <div id="content" class="emoji">
-            <span>It's your Birthday!</span>
+            <span>Happy Myat Noe Ko Day!</span>
+            <button onclick="giftCard()" id="suprise">Click me!</button>
+        </div>
+        <div class="card">
+            <div class="outside">
+                <div class="front">
+                    <p>생일 축하해!</p>
+                    <div class="cake">
+                        <div class="top-layer"></div>
+                        <div class="middle-layer"></div>
+                        <div class="bottom-layer"></div>
+                        <div class="candle"></div>
+                    </div>
+                </div>
+                <div class="back">
+                    <img src="hydrangea.png" alt="Hydrangea">
+                </div>
+            </div>
+            <div class="inside">
+                <p>"사랑과 웃음이 가득한 생일을 진심으로 축하해. 당신의 삶이 점점 더 좋아지기를 바랍니다. 잊지말아... 나는 항상 당신편이아."</p>
+                <h1>&#127873;</h1>
+            </div>
         </div>
     </div>
 
