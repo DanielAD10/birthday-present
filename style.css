@@ -28,9 +28,9 @@ body {
     text-transform: uppercase;
 } */
 
-.countdown {
+/* .countdown {
     display: none;
-} 
+}  */
 
 h1 {
     font-weight: normal;
@@ -77,7 +77,7 @@ button:hover {
 }
 
 .card {
-    /* display: none; */
+    display: none;
     width: 640px;
     height: 400px;
     position: absolute;
